@@ -3,6 +3,7 @@ function [predicted_ouput]=main_foreacting_seizure(EEG,fs,wl)
 % fs-sampling frequency
 % wl-sliding time window (1 min recommended)
 % Replace Training_features_forecasting_annotation_10_predicted_interval.xlsx on own database, last column is annotation.
+% Leave-One-Subject-Out (LOSO) validation was used to evaluate model performance in a subject-independent manner, where new subject is used for testing while the remaining subjects are used for training.
 
 no_segments_20s=round((wl*60)/20);
 TRAINING=xlsread('Training_features_forecasting_annotation_10_predicted_interval.xlsx');%Replace with features extracted from own dataset+forecasting annotation
