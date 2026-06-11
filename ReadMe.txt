@@ -43,6 +43,7 @@ Same structure as above
 Last column: forecasting label
 
 5. Run Seizure Detection
+Model parameters are provided based on strong performance on available data; users may tune hyperparameters for their own datasets.
 Execute:
 main_seizure_detection
 6. Run Seizure Forecasting
