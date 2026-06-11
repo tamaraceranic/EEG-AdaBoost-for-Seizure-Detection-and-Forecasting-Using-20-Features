@@ -24,7 +24,7 @@ Label a segment as predicted seizure if a seizure occurs within the next predefi
 
 The framework supports multiple evaluation strategies, including subject-independent leave-one-subject-out (LOSO) validation and standard train–test splits.
 
-In the default implementation (main_seizure_detection.m and main_forecasting_seizure.m), evaluation is performed in a LOSO-like manner, where data from one subject (or neonate) is held out for testing while all remaining subjects are used for training.
+In the default implementation (main_seizure_detection.m and main_forecasting_seizure.m), evaluation is performed in a LOSO-based strategy, where data from one subject (or neonate) is held out for testing while all remaining subjects are used for training.
 
 For each test subject, features are extracted and evaluated independently, simulating real-world clinical inference on unseen patients.
 
