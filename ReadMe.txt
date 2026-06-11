@@ -18,7 +18,17 @@ If a seizure lasts more than 10 seconds within the segment, label it as seizure.
 Seizure Forecasting:
 Label a segment as predicted seizure if a seizure occurs within the next predefined prediction interval (recommended 10 min).
 
-4. Prepare Input Files
+4. Data Splitting and Evaluation Strategy
+
+The framework supports multiple evaluation strategies, including subject-independent leave-one-subject-out (LOSO) validation and standard train–test splits.
+
+In the default implementation (main_seizure_detection.m and main_forecasting_seizure.m), evaluation is performed in a LOSO-like manner, where data from one subject (or neonate) is held out for testing while all remaining subjects are used for training.
+
+For each test subject, features are extracted and evaluated independently, simulating real-world clinical inference on unseen patients.
+
+Users may also implement alternative splitting strategies (e.g., k-fold or random splits), but must ensure strict subject-level separation.
+
+5. Prepare Input Files
 
 Create the following .xlsx files:
 
