@@ -3,6 +3,7 @@ function [predicted_ouput]=main_seizure_detection(EEG,fs)
 % fs-sampling frequency
 % replace Training_features_detection_annotation.xlsx on own database, last column is annotation.
 % predicted_ouput-output based on AdaBoost per 20s EEG
+% Leave-One-Subject-Out (LOSO) validation was used to evaluate model performance in a subject-independent manner, where new subject is used for testing while the remaining subjects are used for training.
 
 TRAINING=xlsread('Training_features_detection_annotation.xlsx');%replace with features extracted from own dataset+annotation
 
