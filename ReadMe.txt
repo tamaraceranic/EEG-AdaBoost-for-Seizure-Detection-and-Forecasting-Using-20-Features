@@ -2,6 +2,8 @@ How to Test EEG-AdaBoost-20F on Your Own Dataset
 
 Follow the steps below to apply the EEG-AdaBoost model (20 features) for seizure detection and forecasting on a single-channel EEG dataset.
 
+Pipeline: EEG segmentation into 20-second windows → band-pass filtering (preprocessing) → baseline feature estimation from selected non-seizure EEG segments → feature extraction → AdaBoost classifier → prediction output (seizure detection or seizure forecasting).
+
 1. Generate Baseline (BL) Features
 Use generate_BL.m to compute baseline features for your single-channel EEG data.
 The function do_bandpass_filtering.m is adapted from the NEURAL: quantitative features for newborn EEG using Matlab toolbox.
