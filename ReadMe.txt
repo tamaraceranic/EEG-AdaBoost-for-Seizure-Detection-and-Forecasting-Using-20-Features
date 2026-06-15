@@ -55,7 +55,10 @@ Same structure as above
 Last column: forecasting label
 
 6. Run Seizure Detection
+
+We use an AdaBoostM1 classifier with decision trees (max depth = 3) as weak learners and 300 boosting iterations.
 Model parameters are provided based on strong performance on the available dataset. Users may further tune hyperparameters for their own datasets if needed.
+
 Execute:
 main_seizure_detection
 
