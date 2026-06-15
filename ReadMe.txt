@@ -6,10 +6,13 @@ Pipeline: Baseline estimation: baseline feature estimation from selected non-sei
           Main pipeline: EEG segmentation into 20-second windows → band-pass filtering (preprocessing) →  feature extraction → AdaBoost classifier → prediction              output (seizure detection or seizure forecasting).
 
 1. Generate Baseline (BL) Features
-Use generate_BL.m to compute baseline features for selected non-seizure single-channel EEG records.
-Input: single-channel non-seizure EEG time series, and sampling frequency (fs). 
-Output: averaged-features per 20s segments of selected non-seizures EEG records.
-The function do_bandpass_filtering.m is adapted from the NEURAL: quantitative features for newborn EEG using Matlab toolbox.
+Use generate_BL.m to compute baseline features from selected non-seizure single-channel EEG recordings.
+Input:
+Single-channel non-seizure EEG time series
+Sampling frequency (fs)
+Output:
+Averaged features per 20-second segments of selected non-seizure EEG recordings
+The function do_bandpass_filtering.m is adapted from the NEURAL toolbox for quantitative neonatal EEG feature extraction in MATLAB.
 
 2. Feature Extraction (20-second Segments)
 Use features_extration.m to extract features from EEG segments. 
