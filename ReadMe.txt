@@ -7,10 +7,13 @@ Pipeline: Baseline estimation: baseline feature estimation from selected non-sei
 
 1. Generate Baseline (BL) Features
 Use generate_BL.m to compute baseline features for selected non-seizure single-channel EEG records.
+Input: single-channel non-seizure EEG time series, and sampling frequency (fs). 
+Output: averaged-features per 20s segments of selected non-seizures EEG records.
 The function do_bandpass_filtering.m is adapted from the NEURAL: quantitative features for newborn EEG using Matlab toolbox.
 
 2. Feature Extraction (20-second Segments)
-Use features_extration.m to extract features from EEG segments. Input: single-channel EEG time series, and sampling frequency (fs). 
+Use features_extration.m to extract features from EEG segments. 
+Input: single-channel EEG time series, and sampling frequency (fs). 
 Output: A matrix containing the extracted 20 EEG features for each 20-second EEG segment (one row per segment)
 
 3. Annotation Guidelines
