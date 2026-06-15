@@ -10,7 +10,8 @@ Use generate_BL.m to compute baseline features for selected non-seizure single-c
 The function do_bandpass_filtering.m is adapted from the NEURAL: quantitative features for newborn EEG using Matlab toolbox.
 
 2. Feature Extraction (20-second Segments)
-Use features_extration.m to extract features from EEG segments.
+Use features_extration.m to extract features from EEG segments. Input: single-channel EEG time series, and sampling frequency (fs). 
+Output: A matrix containing the extracted 20 EEG features for each 20-second EEG segment (one row per segment)
 
 3. Annotation Guidelines
 
