@@ -24,13 +24,13 @@ Seizure Detection
 Label each 20-second EEG segment.
 A segment is labeled as seizure if a seizure lasts more than 10 seconds within that segment.
 Seizure Forecasting
-A segment is labeled as pre-seizure (positive prediction) if a seizure occurs within the next predefined prediction horizon (recommended: 10 minutes).
+A segment is labeled as positive prediction if a seizure occurs within the next predefined prediction horizon (recommended: 10 minutes).
 
 4. Data Splitting and Evaluation Strategy
 
-The framework supports multiple evaluation strategies, including subject-independent leave-one-subject-out (LOSO) validation and standard train–test splitting.
+The framework supports multiple evaluation strategies, including subject-independent leave-one-out cross-validation per subjects and standard train–test splitting.
 
-In the default implementation (main_seizure_detection.m and main_forecasting_seizure.m), evaluation is performed using a LOSO strategy, where data from one subject (neonate) is used for testing while all remaining subjects are used for training.
+In the default implementation (main_seizure_detection.m and main_forecasting_seizure.m), evaluation is performed using a leave-one-out cross-validation per subjects, where data from one subject (neonate) is used for testing while all remaining subjects are used for training.
 
 For each test subject, features are extracted and evaluated independently, simulating real-world clinical deployment on unseen patients.
 
